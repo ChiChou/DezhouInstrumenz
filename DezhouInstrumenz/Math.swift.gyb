@@ -1,0 +1,29 @@
+import Darwin
+import Foundation
+
+
+%{
+unary = [
+'acos', 'asin', 'atan',
+'cos', 'sin', 'tan',
+'acosh', 'asinh', 'atanh',
+'cosh', 'sinh', 'tanh',
+'exp', 'exp2', 'expm1',
+'log', 'log2', 'log1p', 'log10', 'logb',
+'fabs', 'cbrt', 'sqrt',
+'erf', 'erfc',
+'tgamma',
+'ceil', 'floor', 'nearbyint', 'rint', 'trunc',
+]
+}%
+
+class Math {
+%for f in unary:
+
+@objc
+func ${f}(x: NSNumber) -> NSNumber {
+return NSNumber(value: Darwin.${f}(x.doubleValue))
+}
+%end
+}
+
