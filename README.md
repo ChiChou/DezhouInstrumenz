@@ -1,6 +1,6 @@
 # DezhouInstrumenz
 
-Source code of "Dezhou Insrumentz" challenge from RealWorldCTF 2019 quals 
+Source code of "Dezhou Instrumentz" challenge from RealWorldCTF 2019 quals 
 
 # Writeups
 

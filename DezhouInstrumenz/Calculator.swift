@@ -44,7 +44,7 @@ public final class Calculator {
         }
     }
 
-    // monkey patch to add mathmatic functions
+    // monkey patch to add mathematical functions
     private func connect() {
         let className = "_NSPredicateUtilities"
         if let clazz = (className as NSString).forName() {
